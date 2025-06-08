@@ -1,9 +1,9 @@
 export const allProjects = [
   {
-    id: "p34",
+    id: "p35",
     title: "Arbitrage Bot",
-    thumbnail: "/project/crypto.png",
-    images: ["/project/crypto.png"],
+    thumbnail: "project/crypto.png",
+    images: ["project/crypto.png"],
     techs: [
       "Go",
       "TypeScript",
@@ -23,10 +23,10 @@ export const allProjects = [
     ],
   },
   {
-    id: "p35",
+    id: "p36",
     title: "Marketplace Backend",
-    thumbnail: "/project/nodejs.jpg",
-    images: ["/project/nodejs.jpg"],
+    thumbnail: "project/nodejs.jpg",
+    images: ["project/nodejs.jpg"],
     techs: ["Node.js", "PostgreSQL", "MongoDB", "JavaScript"],
     description: [
       " Developed a backend system for an education-focused marketplace, supporting course listings, orders, and user management.",
@@ -40,7 +40,7 @@ export const allProjects = [
   {
     id: "p1",
     title: "DMS - Delivery Management System",
-    thumbnail: "/project/dms2.png",
+    thumbnail: "project/dms2.png",
     images: ["project/dms1.png", "project/dms2.png", "project/dms3.png"],
     techs: ["Desktop", "C#", "PosgreSQL", "Maintain", "Add Feature"],
     description: [
