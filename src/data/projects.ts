@@ -1,0 +1,630 @@
+export const allProjects = [
+  {
+    id: "p34",
+    title: "Arbitrage Bot",
+    thumbnail: "/project/crypto.png",
+    images: ["/project/crypto.png"],
+    techs: [
+      "Go",
+      "TypeScript",
+      "Redis",
+      "RabbitMQ",
+      "JavaScrypt",
+      "Python",
+      "Solidity",
+    ],
+    description: [
+      "Built and maintained a multi-strategy arbitrage bot operating across DEXs and CEXs, targeting real-time profit opportunities",
+      "Implemented flash loan arbitrage on EVM DEXs using smart contracts (Solidity) and Web3 integrations.",
+      "Deployed triangular arbitrage logic on CEXs to exploit mispriced token pairs",
+      "Engineered cross-chain DEX arbitrage flows with fast bridging logic and on-chain monitoring",
+      "Used Python, Go and TS for high-performance logic (e.g. pathfinding, binary search on trade sizes)",
+      "Optimized for low latency with block-level monitoring and gas-efficient transaction crafting",
+    ],
+  },
+  {
+    id: "p35",
+    title: "Marketplace Backend",
+    thumbnail: "/project/nodejs.jpg",
+    images: ["/project/nodejs.jpg"],
+    techs: ["Node.js", "PostgreSQL", "MongoDB", "JavaScript"],
+    description: [
+      " Developed a backend system for an education-focused marketplace, supporting course listings, orders, and user management.",
+      "Integrated multiple payment gateways and delivery APIs to enable smooth purchasing and content delivery.",
+      "Built with RESTful architecture, handling authentication, role-based access, and real-time order tracking.",
+      "Designed relational database schema using Sequelize with migration/versioning support.",
+      "Prioritized scalability and modularity, allowing easy extension for new features like vouchers and affiliate programs.",
+    ],
+  },
+
+  {
+    id: "p1",
+    title: "DMS - Delivery Management System",
+    thumbnail: "/project/dms2.png",
+    images: ["project/dms1.png", "project/dms2.png", "project/dms3.png"],
+    techs: ["Desktop", "C#", "PosgreSQL", "Maintain", "Add Feature"],
+    description: [
+      "Concrete delivery management application. This application facilitates business processes",
+      "such as receiving concrete orders from customers - delivery scheduling, report generation,",
+      "commission calculation, delivery and questionnaire calculation and etc.",
+    ],
+  },
+  {
+    id: "p2",
+    title: "Portal GRC",
+    thumbnail: "project/alto2.png",
+    images: ["project/alto1.png", "project/alto2.png", "project/alto3.png"],
+    techs: [
+      "Website",
+      "C#",
+      "ASP Net Core",
+      "PosgreSQL",
+      "Design DB & System",
+      "Develop",
+      "Publish",
+    ],
+    description: [
+      "Portal GRC is web-based application and mobile application that accommodate information and automate",
+      "processes in the GRC department.",
+      "This web application features Changes Management Form Online, Product catalogs,",
+      "Mailing System, E-library, Document requests and permissions, Reporting creation and automation, and SOP",
+      "management.",
+    ],
+  },
+  {
+    id: "p3",
+    title: "BiShare",
+    thumbnail: "project/bishare2.png",
+    images: [
+      "project/bishare1.png",
+      "project/bishare2.png",
+      "project/bishare3.png",
+    ],
+    techs: [
+      "College Project",
+      "Mobile",
+      "Javascript",
+      "React Native",
+      "Firebase Realtime database",
+      "Design DB & System",
+      "Develop",
+    ],
+    description: [
+      "Applications used for entrepreneurship development. This application is to accommodate entrepreneurs",
+      "for business matching and pitching, business exhibitions, business promotions, buying and selling",
+      "products and services, accommodating the results of commercialized PBL products.",
+      "This mobile application is made using a Javascript framework for mobile react native, Expo.",
+      "it uses a firebase database for data storage. this is very useful for the chat feature.",
+    ],
+  },
+  {
+    id: "p4",
+    title: "BiShare Dashboard",
+    thumbnail: "project/bisharedashboard2.png",
+    images: [
+      "project/bisharedashboard1.png",
+      "project/bisharedashboard2.png",
+      "project/bisharedashboard3.png",
+    ],
+    techs: [
+      "College Project",
+      "Website",
+      "PHP",
+      "CodeIgniter",
+      "Firebase Realtime database",
+      "Design DB & System",
+      "Develop",
+    ],
+    description: [
+      "Applications used for entrepreneurship development. This application is to accommodate entrepreneurs",
+      "for business matching and pitching, business exhibitions, business promotions, buying and selling",
+      "products and services, accommodating the results of commercialized PBL products.",
+    ],
+  },
+  {
+    id: "p5",
+    title: "Portal GRC Mobile",
+    thumbnail: "project/altomobile2.png",
+    images: [
+      "project/altomobile1.png",
+      "project/altomobile2.png",
+      "project/altomobile3.png",
+    ],
+    techs: [
+      "Mobile",
+      "C#",
+      "Xamarin",
+      "PosgreSQL",
+      "Design DB & System",
+      "Develop",
+      "Publish",
+    ],
+    description: [
+      "The GRC Portal is a mobile application that accommodates information and reports, this application is a",
+      "companion application to the GRC portal.",
+      "This mobile application displays Online Change Management Forms, documents and reporting",
+    ],
+  },
+  {
+    id: "p6",
+    title: "Oniq PBB",
+    thumbnail: "project/oniqpbb2.png",
+    images: [
+      "project/oniqpbb1.png",
+      "project/oniqpbb2.png",
+      "project/oniqpbb3.png",
+    ],
+    techs: ["Desktop", "C#", "PosgreSQL", "Maintain", "Add Feature"],
+    description: [
+      "Oniq PBB is an accounting application that runs on a desktop platform, this application is useful for",
+      "recording accounting journals, reporting and other features made specifically for this application.",
+    ],
+  },
+  {
+    id: "p7",
+    title: "Beton Link",
+    thumbnail: "project/betonlink1.png",
+    images: [
+      "project/betonlink1.png",
+      "project/betonlink2.png",
+      "project/betonlink3.png",
+      "project/betonlink4.png",
+    ],
+    techs: ["Mobile", "C#", "Xamarin", "PosgreSQL", "Maintain", "Add Feature"],
+    description: [
+      "Beton Link is a mobile application for ordering concrete online.",
+    ],
+  },
+  {
+    id: "p8",
+    title: "Beton Link Web",
+    thumbnail: "project/betonlinkweb2.png",
+    images: ["project/betonlinkweb1.png", "project/betonlinkweb2.png"],
+    techs: [
+      "Web",
+      "ASP Net Core",
+      "C#",
+      "PosgreSQL",
+      "Maintain",
+      "Add Feature",
+    ],
+    description: [
+      "Beton Link is a web application for ordering concrete online.",
+    ],
+  },
+  {
+    id: "p9",
+    title: "Dunia Kucing",
+    thumbnail:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg",
+    images: [],
+    techs: ["Mobile", "Xamarin", "C#", "PosgreSQL", "Develop"],
+    description: [
+      "Dunia Kucing is a mobile app to book services in a pet shop",
+    ],
+  },
+  {
+    id: "p10",
+    title: "Kiens",
+    thumbnail: "project/kiens2.png",
+    images: ["project/kiens1.png", "project/kiens2.png", "project/kiens3.png"],
+    techs: ["Mobile", "Xamarin", "C#", "PosgreSQL", "Develop"],
+    description: ["Kiens is a mobile app to pay, book or order services"],
+  },
+  {
+    id: "p11",
+    title: "MHS School Portal",
+    thumbnail: "project/mhssis2.png",
+    images: [
+      "project/mhssis1.png",
+      "project/mhssis2.png",
+      "project/mhssis3.png",
+    ],
+    techs: ["Web", "ASP MVC", "C#", "SQL Server", "Maintain", "Add Feature"],
+    description: [
+      "MHS School Portal is a web application for high school with features such as registration, payment,",
+      "accounting, reporting, payroll, documents, etc.",
+    ],
+  },
+  {
+    id: "p12",
+    title: "MHS Mobile",
+    thumbnail: "project/mhsapp1.png",
+    images: [
+      "project/mhsapp1.png",
+      "project/mhsapp2.png",
+      "project/mhsapp3.png",
+    ],
+    techs: [
+      "Mobile",
+      "React Native",
+      "Javascript",
+      "PostgreSQL",
+      "ASP Net Core",
+      "Develop Back End",
+    ],
+    description: [
+      "MHS Mobile is mobile app for MHS High School with features such as registration and payment online",
+    ],
+  },
+  {
+    id: "p13",
+    title: "Oniq KUB",
+    thumbnail: "project/oniqpbb2.png",
+    images: [
+      "project/oniqpbb1.png",
+      "project/oniqpbb2.png",
+      "project/oniqpbb3.png",
+    ],
+    techs: ["Desktop", "C#", "PosgreSQL", "Develop", "Add Feature"],
+    description: [
+      "Oniq KUB is an accounting application that runs on a desktop platform, this application is useful for",
+      "recording accounting journals, reporting and other features made specifically for kitchen and catering",
+      "business.",
+    ],
+  },
+  {
+    id: "p14",
+    title: "Oniq Showroom",
+    thumbnail: "project/oniqpbb2.png",
+    images: ["project/oniqpbb1.png", "project/oniqpbb2.png"],
+    techs: ["Desktop", "C#", "PosgreSQL", "Develop", "Add Feature"],
+    description: [
+      "Oniq Showroom is an accounting application that runs on a desktop platform, this application is useful for",
+      "recording accounting journals, reporting and other features made specifically for Car and Bike Dealership.",
+    ],
+  },
+  {
+    id: "p15",
+    title: "Oniq Showroom OCN",
+    thumbnail: "project/oniqpbb1.png",
+    images: ["project/oniqpbb1.png", "project/oniqpbb2.png"],
+    techs: ["Desktop", "C#", "PosgreSQL", "Develop", "Add Feature"],
+    description: [
+      "Oniq Showroom OCN is an accounting application that runs on a desktop platform, this application is useful",
+      "for",
+      "recording accounting journals, reporting, and other features made specifically for Car and Bike Dealership",
+      "like Oniq Showroom with an added feature for approval for transactions and more reports.",
+    ],
+  },
+  {
+    id: "p16",
+    title: "DMS APP",
+    thumbnail:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg",
+    images: [
+      "project/betonlink1.png",
+      "project/betonlink2.png",
+      "project/betonlink3.png",
+      "project/betonlink4.png",
+    ],
+    techs: ["Mobile", "C#", "Xamarin", "PosgreSQL", "Maintain", "Add Feature"],
+    description: [
+      "DMS APP is a mobile companion application for DMS Desktop. it used by employee like salesmanager, driver,",
+      "etc.",
+    ],
+  },
+  {
+    id: "p17",
+    title: "Siplapus Mobile",
+    thumbnail: "project/sipalpus1.png",
+    images: [
+      "project/sipalpus1.png",
+      "project/sipalpus2.png",
+      "project/sipalpus3.png",
+      "project/sipalpus4.png",
+    ],
+    techs: ["Mobile", "C#", "Xamarin", "PosgreSQL", "Maintain", "Add Feature"],
+    description: [
+      "Siplapus Mobile is a mobile application for scanning electrical and water use.",
+    ],
+  },
+  {
+    id: "p18",
+    title: "Siplapus Desktop",
+    thumbnail:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg",
+    images: [],
+    techs: ["Desktop", "C#", "PosgreSQL", "Develop", "Add Feature"],
+    description: [
+      "Siplapus is an accounting application that runs on a desktop platform, this application is useful",
+      "for",
+      "recording accounting journals, reporting, and other features made specifically for calculating and",
+      "collecting utility payment.",
+    ],
+  },
+  {
+    id: "p19",
+    title: "Kiens Desktop",
+    thumbnail:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-plain.svg",
+    images: [],
+    techs: ["Desktop", "C#", "PosgreSQL", "Develop", "Add Feature"],
+    description: [
+      "Kiens is an accounting application that runs on a desktop platform, this application is useful",
+      "for",
+      "recording accounting journals, reporting, and other features made specifically for marketing company.",
+    ],
+  },
+  {
+    id: "p20",
+    title: "Delion Kargo",
+    thumbnail: "project/oniqpbb1.png",
+    images: ["project/oniqpbb1.png", "project/oniqpbb2.png"],
+    techs: ["Desktop", "C#", "PosgreSQL", "Develop", "Add Feature"],
+    description: [
+      "Delion Kargo is an accounting application that runs on a desktop platform, this application is useful for",
+      "recording accounting journals, reporting and other features made specifically for Cargo and Shipping",
+      "company.",
+    ],
+  },
+  {
+    id: "p21",
+    title: "SIBADAK",
+    thumbnail: "project/sibadak2.png",
+    images: [
+      "project/sibadak1.png",
+      "project/sibadak2.png",
+      "project/sibadak3.png",
+    ],
+    techs: [
+      "Website",
+      "C#",
+      "ASP .Net Core",
+      "PosgreSQL",
+      "Develop",
+      "Add Feature",
+    ],
+    description: [
+      "Sibadak stand for Sistem Informasi Belanja Anggaran Daerah Kepuluan Riau or Riau Islands regional budget",
+      "expenditure information system in english is an",
+      "web application to managing budget expenditure for goverment in Kepri Province.",
+    ],
+  },
+  {
+    id: "p22",
+    title: "Dashboard Bukopin",
+    thumbnail: "project/bukopin1.png",
+    images: [
+      "project/bukopin1.png",
+      "project/bukopin2.png",
+      "project/bukopin3.png",
+    ],
+    techs: ["Website", "Javascript", "ReactJS", "Develop", "Add Feature"],
+    description: [
+      "Dashboard Bukopin is a",
+      "web application to show data of goverment earning in this province with collaboration of Bukopin bank.",
+    ],
+  },
+  {
+    id: "p23",
+    title: "EMONEV",
+    thumbnail: "project/emonev1.png",
+    images: ["project/emonev1.png", "project/emonev2.png"],
+    techs: [
+      "Website",
+      "C#",
+      "ASP .Net Core",
+      "PosgreSQL",
+      "Develop",
+      "Add Feature",
+    ],
+    description: [
+      "EMONEV stand for Elektronic Monitoring and Evaliation is a",
+      "web application to show data of earning goverment in this province",
+    ],
+  },
+  {
+    id: "p24",
+    title: "E-Retribusi",
+    thumbnail: "project/eretribusi1.png",
+    images: [
+      "project/eretribusi1.png",
+      "project/eretribusi2.png",
+      "project/eretribusi3.png",
+    ],
+    techs: [
+      "Website",
+      "C#",
+      "ASP .Net Core",
+      "PosgreSQL",
+      "Develop",
+      "Add Feature",
+    ],
+    description: [
+      "E-Retribusi is a web application to show data of retribution received in this province",
+    ],
+  },
+  {
+    id: "p25",
+    title: "GetMove",
+    thumbnail: "project/getmove1.jpg",
+    images: [
+      "project/getmove1.jpg",
+      "project/getmove2.jpg",
+      "project/getmove3.jpg",
+      "project/getmove4.jpg",
+    ],
+    techs: [
+      "Mobile",
+      "C#",
+      "Xamarin",
+      "PosgreSQL",
+      "Design DB & System",
+      "Develop",
+      "Publish",
+    ],
+    description: [
+      "GetMove is a mobile application that accommodates your city courier and provider listing business as you",
+      "need.",
+    ],
+  },
+  {
+    id: "p26",
+    title: "GetMove Driver",
+    thumbnail: "project/getmovedriver1.png",
+    images: [
+      "project/getmovedriver1.png",
+      "project/getmovedriver2.png",
+      "project/getmovedriver3.png",
+    ],
+    techs: [
+      "Mobile",
+      "C#",
+      "Xamarin",
+      "PosgreSQL",
+      "Design DB & System",
+      "Develop",
+      "Publish",
+    ],
+    description: [
+      "GetMove Driver is a mobile application that accommodates your city courier and provider listing business as",
+      "you",
+      "need for currier.",
+    ],
+  },
+  {
+    id: "p27",
+    title: "MeGold",
+    thumbnail: "project/megold1.png",
+    images: ["project/megold1.png"],
+    techs: [
+      "Back-End",
+      "C#",
+      "ASP .Net Core",
+      "PosgreSQL",
+      "Design DB & System",
+      "Develop",
+    ],
+    description: [
+      "MeGold is a mobile application for buying and selling gold online.",
+    ],
+  },
+  {
+    id: "p28",
+    title: "Swart Walikota",
+    thumbnail:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg",
+    images: [],
+    techs: [
+      "Mobile",
+      "C#",
+      "Xamarin",
+      "PosgreSQL",
+      "Design DB & System",
+      "Develop",
+      "Publish",
+    ],
+    description: [
+      "Swart Walikota is a mobile application that accommodates voting count of city leader election.",
+    ],
+  },
+  {
+    id: "p29",
+    title: "Swart Gubernur",
+    thumbnail:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg",
+    images: [],
+    techs: [
+      "Mobile",
+      "C#",
+      "Xamarin",
+      "PosgreSQL",
+      "Design DB & System",
+      "Develop",
+      "Publish",
+    ],
+    description: [
+      "Swart Gubernur is a mobile application that accommodates voting count of governo election.",
+    ],
+  },
+  {
+    id: "p30",
+    title: "Tiban Kargo",
+    thumbnail: "project/oniqpbb1.png",
+    images: ["project/oniqpbb1.png", "project/oniqpbb2.png"],
+    techs: ["Desktop", "C#", "PosgreSQL", "Develop", "Add Feature"],
+    description: [
+      "Tiban Kargo is an accounting application that runs on a desktop platform, this application is useful for",
+      "recording accounting journals, reporting and other features made specifically for Cargo and Shipping",
+      "company.",
+    ],
+  },
+  {
+    id: "p31",
+    title: "ILog Web",
+    thumbnail: "project/ilog3.png",
+    images: ["project/ilog1.png", "project/ilog2.png", "project/ilog3.png"],
+    techs: [
+      "Website",
+      "C#",
+      "ASP .Net Core",
+      "PosgreSQL",
+      "Develop",
+      "Add Feature",
+    ],
+    description: [
+      "ILog Web is a web application to packet delivery or currier.",
+    ],
+  },
+  {
+    id: "p32",
+    title: "Issue",
+    thumbnail: "project/helpdesk3.png",
+    images: [
+      "project/helpdesk1.png",
+      "project/helpdesk1.png",
+      "project/helpdesk1.png",
+    ],
+    techs: [
+      "Website",
+      "C#",
+      "ASP .Net Core",
+      "PosgreSQL",
+      "Develop",
+      "Add Feature",
+    ],
+    description: [
+      "Issue Tracking System is a web application to manage ticket of issue or a helpdesk system.",
+    ],
+  },
+  {
+    id: "p33",
+    title: "MHS Registrasi",
+    thumbnail: "project/registrasi1.png",
+    images: [
+      "project/registrasi1.png",
+      "project/registrasi1.png",
+      "project/registrasi1.png",
+    ],
+    techs: ["Web", "ASP MVC", "C#", "SQL Server", "Maintain", "Add Feature"],
+    description: [
+      "MHS Registrasi is a web application for high school with features such as registration online,registration",
+      "payment,",
+      "and other features.",
+    ],
+  },
+  {
+    id: "p34",
+    title: "MHS Student Portal",
+    thumbnail: "project/sia1.png",
+    images: ["project/sia1.png", "project/sia2.png"],
+    techs: ["Web", "ASP MVC", "C#", "SQL Server", "Maintain", "Add Feature"],
+    description: [
+      "MHS Student Portal is a web application for high school with features such as school payment for student,",
+      "view or change personal data,",
+      "and other features.",
+    ],
+  },
+];
+
+
+
+export type Project = {
+  id: string;
+  title: string;
+  thumbnail: string;
+  images: string[];
+  techs: string[];
+  description: string[];
+};
