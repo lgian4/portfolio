@@ -78,7 +78,7 @@ export default function Projects({ selectedSkills }: ProjectsProps) {
                 <CarouselNext />
               </Carousel>
 
-              <div className="space-y-2 text-sm text-gray-700">
+              <div className="space-y-2 text-sm text-gray-700 dark:text-gray-50">
                 {selectedProject.description.map((p, idx) => (
                   <p key={idx}>{p}</p>
                 ))}
@@ -95,14 +95,14 @@ function ProjectCard({ title, thumbnail, techs, onClick }: ProjectCardProps) {
   return (
     <div
       onClick={onClick}
-      className="rounded-xl shadow-md overflow-hidden bg-white cursor-pointer"
+      className="rounded-xl shadow-md overflow-hidden bg-slate-0 dark:bg-slate-800 cursor-pointer"
     >
       <img
         src={thumbnail}
         className="w-full aspect-video object-contain bg-white"
       />
       <div className="p-2">
-        <h3 className="text-lg font-semibold">{title}</h3>
+        <h3 className="text-lg ">{title}</h3>
         <div className="flex flex-wrap gap-2 mt-2">
           {techs.map((tech) => (
             <Badge key={tech}>{tech}</Badge>

@@ -7,19 +7,22 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import StickyName from "./components/StickyName";
 import Summary from "./components/Summary";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 function App() {
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
   return (
-    <div className="max-w-7xl px-8 md:px-12 lg:px-24 xl:px-32 mx-auto text-left relative mb-12">
-      <StickyName />
-      <Hero />
-      <Summary />
-      <Experience />
-      <Education />
-      <Skills selectedSkills={selectedSkills} onChange={setSelectedSkills} />
-      <Projects selectedSkills={selectedSkills} />
-      
+    <div className="bg-slate-50 dark:bg-slate-900">
+      <div className="max-w-7xl px-8 md:px-12 lg:px-24 xl:px-32 mx-auto text-left relative mb-12 ">
+        <DarkModeToggle />
+        <StickyName />
+        <Hero />
+        <Summary />
+        <Experience />
+        <Education />
+        <Skills selectedSkills={selectedSkills} onChange={setSelectedSkills} />
+        <Projects selectedSkills={selectedSkills} />
+      </div>
     </div>
   );
 }
