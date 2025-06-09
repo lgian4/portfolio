@@ -1,14 +1,27 @@
-import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Experience() {
+  const { scrollY } = useScroll();
+  const [, setShow] = useState(false);
+
+  useEffect(() => {
+    return scrollY.onChange((y) => {
+      setShow(y > 100); // toggle after scrolling 100px
+    });
+  }, [scrollY]);
+
+  const opacity = useTransform(scrollY, [0, 200], [0, 1]);
+
+
   return (
-    <section className="mx-auto mt-16 md:mt-24">
+    <motion.section className="mx-auto mt-16 md:mt-24" style={{opacity}}>
       <motion.h2
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -123,6 +136,6 @@ export default function Experience() {
           </Accordion>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

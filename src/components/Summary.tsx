@@ -1,13 +1,26 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Summary() {
+  const { scrollY } = useScroll();
+  const [, setShow] = useState(false);
+
+  useEffect(() => {
+    return scrollY.onChange((y) => {
+      setShow(y > 100); // toggle after scrolling 100px
+    });
+  }, [scrollY]);
+
+  const opacity = useTransform(scrollY, [0, 200], [0, 1]);
+
   return (
     <motion.section
+      style={{ opacity }}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
-      className=" mx-auto mt-16 md:mt-24 text-slate-700 dark:text-slate-300 text-lg md:text-xl leading-relaxed font-poppins"
+      className=" mx-auto  text-slate-700 dark:text-slate-300 text-lg md:text-xl leading-relaxed font-poppins"
     >
       <p>
         Backend-focused developer with 6+ years of experience building internal

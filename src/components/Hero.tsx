@@ -20,8 +20,9 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="py-20 md:py-32 lg:py-40 min-h-[100vh] flex flex-col justify-center relative"
-    >
+      className="pt-[30vh] pb-20 md:pb-30 lg:pb-40 flex flex-col justify-center relative"
+>
+    
       <motion.h1
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
