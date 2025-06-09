@@ -8,7 +8,7 @@ export const allProjects = [
       "Go",
       "TypeScript",
       "Redis",
-      "RabbitMQ",
+      "RabbitMq",
       "JavaScrypt",
       "Python",
       "Solidity",

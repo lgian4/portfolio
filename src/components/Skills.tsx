@@ -7,10 +7,9 @@ import {
 } from "@/components/ui/tooltip";
 import { skills } from "@/data/skills";
 
-
 type SkillsProps = {
-  selectedSkills: string[];
-  onChange: (skills: string[]) => void;
+  selectedSkills: string;
+  onChange: (skills: string) => void;
 };
 
 export default function Skills({ selectedSkills, onChange }: SkillsProps) {
@@ -22,9 +21,15 @@ export default function Skills({ selectedSkills, onChange }: SkillsProps) {
 
       <ToggleGroup
         variant="outline"
-        type="multiple"
+        type="single"
         value={selectedSkills}
-        onValueChange={onChange}
+        onValueChange={(value) => {
+          if (value === selectedSkills) {
+            onChange(""); // deselect if already selected
+          } else {
+            onChange(value);
+          }
+        }}
         className="grid grid-cols-6 gap-2 md:gap-4 mx-auto max-w-[850px]"
       >
         <TooltipProvider>
@@ -33,8 +38,7 @@ export default function Skills({ selectedSkills, onChange }: SkillsProps) {
               <TooltipTrigger asChild>
                 <ToggleGroupItem
                   value={label}
-                  className="w-12 h-12 md:w-20 md:h-20 p-2 md:p-3 rounded-lg border bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition 
-                  data-[state=on]:ring-2 data-[state=on]:ring-sky-500 data-[state=on]:bg-sky-100 dark:data-[state=on]:bg-sky-900"
+                  className="relative w-12 h-12 md:w-20 md:h-20 p-2 md:p-3 rounded-lg border transition-all duration-150 bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 data-[state=on]:ring-4 data-[state=on]:ring-sky-500 data-[state=on]:bg-sky-100 dark:data-[state=on]:bg-sky-800 data-[state=on]:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-300 dark:focus:ring-sky-700"
                 >
                   <img
                     src={icon}

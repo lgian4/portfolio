@@ -10,7 +10,7 @@ import Summary from "./components/Summary";
 import DarkModeToggle from "./components/DarkModeToggle";
 
 function App() {
-  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
+  const [selectedSkill, setSelectedSkill] = useState<string>("");
   return (
     <div className="bg-slate-50 dark:bg-slate-900">
       <div className="max-w-7xl px-8 md:px-12 lg:px-24 xl:px-32 mx-auto text-left relative mb-12 ">
@@ -20,8 +20,8 @@ function App() {
         <Summary />
         <Experience />
         <Education />
-        <Skills selectedSkills={selectedSkills} onChange={setSelectedSkills} />
-        <Projects selectedSkills={selectedSkills} />
+        <Skills selectedSkills={selectedSkill} onChange={setSelectedSkill} />
+        <Projects selectedSkill={selectedSkill} />
       </div>
     </div>
   );

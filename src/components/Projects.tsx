@@ -16,15 +16,13 @@ import { useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { allProjects, type Project } from "@/data/projects";
 
-export default function Projects({ selectedSkills }: ProjectsProps) {
+export default function Projects({ selectedSkill: selectedSkill }: ProjectsProps) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const filteredProjects = useMemo(() => {
-    if (selectedSkills.length === 0) return allProjects;
-    return allProjects.filter((p) =>
-      selectedSkills.some((s) => p.techs.includes(s))
-    );
-  }, [selectedSkills]);
+    if (!selectedSkill || selectedSkill == "") return allProjects;
+    return allProjects.filter((p) => p.techs.includes(selectedSkill));
+  }, [selectedSkill]);
 
   return (
     <>
@@ -114,7 +112,7 @@ function ProjectCard({ title, thumbnail, techs, onClick }: ProjectCardProps) {
 }
 
 type ProjectsProps = {
-  selectedSkills: string[];
+  selectedSkill: string;
 };
 
 type ProjectCardProps = Project & {
