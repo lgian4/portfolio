@@ -16,16 +16,18 @@ import { useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { allProjects, type Project } from "@/data/projects";
 
-export default function Projects({ selectedSkill: selectedSkill }: ProjectsProps) {
+export default function Projects({
+  selectedSkill: selectedSkill,
+}: ProjectsProps) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
+  const [previewImg, setPreviewImg] = useState<string | null>(null);
   const filteredProjects = useMemo(() => {
     if (!selectedSkill || selectedSkill == "") return allProjects;
     return allProjects.filter((p) => p.techs.includes(selectedSkill));
   }, [selectedSkill]);
 
   return (
-    <>
+    <div className="">
       <section className="mx-auto mt-16 md:mt-24">
         <motion.h2
           initial={{ opacity: 0, x: -30 }}
@@ -47,7 +49,7 @@ export default function Projects({ selectedSkill: selectedSkill }: ProjectsProps
         </div>
       </section>
       <Dialog
-        open={selectedProject !== null}
+        open={selectedProject !== null && previewImg === null}
         onOpenChange={() => setSelectedProject(null)}
       >
         <DialogContent className="w-full max-w-[90vw] md:max-w-4xl">
@@ -68,7 +70,11 @@ export default function Projects({ selectedSkill: selectedSkill }: ProjectsProps
                 <CarouselContent>
                   {selectedProject.images.map((img: string, idx: number) => (
                     <CarouselItem key={idx}>
-                      <img src={img} className="w-full h-60 object-contain" />
+                      <img
+                        src={img}
+                        onClick={() => setPreviewImg(img)}
+                        className="w-full h-60 object-contain cursor-zoom-in transition hover:opacity-80"
+                      />
                     </CarouselItem>
                   ))}
                 </CarouselContent>
@@ -85,7 +91,23 @@ export default function Projects({ selectedSkill: selectedSkill }: ProjectsProps
           )}
         </DialogContent>
       </Dialog>
-    </>
+      {previewImg && (
+        <div
+          className="fixed inset-0 z-150 bg-black/80 flex items-center justify-center"
+          onClick={(e) => {
+            e.stopPropagation(); // ← prevent it reaching the dialog behind
+            setPreviewImg(null);
+          }}
+        >
+          <img
+            src={previewImg}
+            alt="Preview"
+            className="max-w-[90vw] max-h-[90vh] object-contain rounded-md shadow-lg"
+            onClick={(e) => e.stopPropagation()} // also keep this
+          />
+        </div>
+      )}
+    </div>
   );
 }
 

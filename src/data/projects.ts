@@ -573,8 +573,8 @@ export const allProjects = [
     thumbnail: "project/helpdesk3.png",
     images: [
       "project/helpdesk1.png",
-      "project/helpdesk1.png",
-      "project/helpdesk1.png",
+      "project/helpdesk2.png",
+      "project/helpdesk3.png",
     ],
     techs: [
       "Website",
